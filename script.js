@@ -51,7 +51,7 @@ var doesPlayerBeatComputer = function (playerObject, computerObject) {
  * @param {string} computerObject
  */
 var getDefaultObjectsMessage = function (playerObject, computerObject) {
-  return `${userName}'s object: ${playerObject} <br>
+  return `${userName}'s object: ${playerObject}
     Computer's object: ${computerObject}.`;
 };
 
@@ -99,23 +99,17 @@ var main = function (input) {
   if (playerObject == computerObject) {
     // Increment num draws in win-loss record
     numDraws += 1;
-    // Use <br> to create new lines in HTML output.
-    return `${defaultObjectsMessage} <br><br>
-      It's a draw! <br><br>
-      ${getDefaultWinLossMessage()}`;
+    // Use \n newline character for newlines in strings.
+    return `${defaultObjectsMessage} \n\n It's a draw! \n\n ${getDefaultWinLossMessage()}`;
   }
   // If not draw, check if player wins
   if (doesPlayerBeatComputer(playerObject, computerObject)) {
     // Increment num player wins in win-loss record
     numPlayerWins += 1;
-    return `${defaultObjectsMessage} <br><br>
-      ${userName} wins! <br><br>
-      ${getDefaultWinLossMessage()}`;
+    return `${defaultObjectsMessage} \n\n ${userName} wins! \n\n ${getDefaultWinLossMessage()}`;
   }
   // If it's not a draw and player has not won, then computer wins.
   // Increment num computer wins in win-loss record
   numComputerWins += 1;
-  return `${defaultObjectsMessage} <br><br>
-    Computer wins! <br><br>
-    ${getDefaultWinLossMessage()}`;
+  return `${defaultObjectsMessage} \n\n Computer wins! \n\n ${getDefaultWinLossMessage()}`;
 };
