@@ -47,8 +47,8 @@ var doesPlayerBeatComputer = function (playerObject, computerObject) {
 
 /**
  * Return standard string representing player's and computer's objects
- * @param {*} playerObject
- * @param {*} computerObject
+ * @param {string} playerObject
+ * @param {string} computerObject
  */
 var getDefaultObjectsMessage = function (playerObject, computerObject) {
   return `${userName}'s object: ${playerObject} <br>
