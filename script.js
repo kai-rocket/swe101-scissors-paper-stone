@@ -99,17 +99,17 @@ var main = function (input) {
   if (playerObject == computerObject) {
     // Increment num draws in win-loss record
     numDraws += 1;
-    // Use \n newline character for newlines in strings.
-    return `${defaultObjectsMessage} \n\n It's a draw! \n\n ${getDefaultWinLossMessage()}`;
+    // Use <br> HTML tag for newlines in strings.
+    return `${defaultObjectsMessage} <br><br> It's a draw! <br><br> ${getDefaultWinLossMessage()}`;
   }
   // If not draw, check if player wins
   if (doesPlayerBeatComputer(playerObject, computerObject)) {
     // Increment num player wins in win-loss record
     numPlayerWins += 1;
-    return `${defaultObjectsMessage} \n\n ${userName} wins! \n\n ${getDefaultWinLossMessage()}`;
+    return `${defaultObjectsMessage} <br><br> ${userName} wins! <br><br> ${getDefaultWinLossMessage()}`;
   }
   // If it's not a draw and player has not won, then computer wins.
   // Increment num computer wins in win-loss record
   numComputerWins += 1;
-  return `${defaultObjectsMessage} \n\n Computer wins! \n\n ${getDefaultWinLossMessage()}`;
+  return `${defaultObjectsMessage} <br><br> Computer wins! <br><br> ${getDefaultWinLossMessage()}`;
 };
